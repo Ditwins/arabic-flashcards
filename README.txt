@@ -1,25 +1,7 @@
-АРАБСКИЙ — КАРТОЧКИ (PWA)
+Arabic · English Flashcards v3
 
-Файлы: index.html, app.js, manifest.webmanifest, sw.js, icon-192.png, icon-512.png.
+Upload the CONTENTS of this folder to the root of your GitHub Pages repository. Keep the same URL and app installation. Refresh/reopen the app after GitHub Pages finishes deployment. Offline cache version is v3.
 
-БЫСТРАЯ ПРОВЕРКА НА КОМПЬЮТЕРЕ
-Откройте index.html в браузере. Карточки, тесты и локальное сохранение работают без сервера. Однако установка как PWA и service worker требуют HTTPS или localhost.
+Existing built-in cards are migrated to English. Progress and user-created cards are preserved. Custom Russian translations without a known equivalent are marked [Edit English translation] for manual editing. Export a backup before upgrading.
 
-УСТАНОВКА НА IPHONE
-1. Загрузите ВСЕ файлы из этой папки в корень репозитория GitHub.
-2. GitHub: Settings > Pages > Deploy from a branch > main / (root) > Save.
-3. Дождитесь появления адреса https://USERNAME.github.io/REPOSITORY/.
-4. Откройте адрес в Safari на iPhone.
-5. Нажмите «Поделиться» > «На экран Домой» > «Добавить».
-6. Один раз откройте приложение с интернетом. После кеширования оно работает офлайн.
-
-ВАЖНО
-Данные хранятся только в браузере конкретного устройства. Установка приложения на другом устройстве не синхронизирует карточки. Регулярно используйте Настройки > Скачать резервную копию, а для восстановления — Импортировать резервную копию.
-
-Проверка ввода арабского ответа игнорирует огласовки. Варианты теста выбираются из того же набора.
-
-ОБНОВЛЕНИЕ v2 (2026-11-11)
-- 50 глаголов в настоящем времени от первого лица (Я...).
-- Новый набор «Время»: 49 карточек, включая дни недели, месяцы и сезоны.
-- При обновлении сохраняются остальные наборы и общая статистика. Старые встроенные глаголы прошедшего времени заменяются, пользовательские дополнительные карточки в этом наборе сохраняются.
-- Если приложение уже опубликовано, замените файлы на хостинге. При необходимости закройте и снова откройте приложение после обновления кеша.
+All data stays in localStorage on your device.
