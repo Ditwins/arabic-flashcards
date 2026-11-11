@@ -1,7 +1,5 @@
-Arabic · English Flashcards v3
+Arabic · English Flashcards v3.4
 
-Upload the CONTENTS of this folder to the root of your GitHub Pages repository. Keep the same URL and app installation. Refresh/reopen the app after GitHub Pages finishes deployment. Offline cache version is v3.
+Upload the CONTENTS of this folder to the root of your GitHub Pages repository, replacing existing files.
 
-Existing built-in cards are migrated to English. Progress and user-created cards are preserved. Custom Russian translations without a known equivalent are marked [Edit English translation] for manual editing. Export a backup before upgrading.
-
-All data stays in localStorage on your device.
+Changes: Colors contain 10 masculine forms including Orange, Purple, Pink, Brown. Professions use masculine forms only, including Nurse. Pronouns, Verbs, Time unchanged. Existing local progress is preserved for retained cards. Removed feminine cards no longer appear in the built-in decks. Offline cache updated.
