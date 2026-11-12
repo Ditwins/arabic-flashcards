@@ -15,3 +15,5 @@ Version 4.2: Flip Cards front uses previous answer beige; answer side is lighter
 Version 4.3: Multiple Choice question and Type the Answer question use Flip Cards front paper color; Multiple Choice options use Flip Cards answer paper color. Correct/wrong highlighting remains unchanged.
 
 Version 4.4: English → Arabic question text +50% in Multiple Choice and Type the Answer; Arabic Multiple Choice options half size.
+
+Version 4.7: Flip Cards is browse-only: no correct/mistake counters or ratings; Next button on both faces; removed multiple choice minimum card hint from deck page.
