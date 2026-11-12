@@ -118,7 +118,7 @@ function study(){
  let body='';
  if(state.mode==='flip'){
   const controls=state.flipped?button('Again','mark-wrong','danger')+button('Know ✓','mark-correct',''):button('Show answer','flip','');
-  body=`<button class="card" data-action="flip"><span class="hint">${state.flipped?'ANSWER':'RECALL THE TRANSLATION'}</span>${face(it,state.flipped)}<span class="hint">↻ Tap to flip</span></button><div class="controls" style="margin-top:15px">${controls}</div>`;
+  body=`<button class="card flip-card ${state.flipped?'flip-answer':'flip-question'}" data-action="flip">${face(it,state.flipped)}<span class="hint">↻ Tap to flip</span></button><div class="controls" style="margin-top:15px">${controls}</div>`;
  }else if(state.mode==='choice'){
   if(!state.choiceIds){
    let choices=deck().items.filter(x=>x.id!==it.id);
@@ -130,10 +130,10 @@ function study(){
   const choices=state.choiceIds.map(id=>deck().items.find(c=>c.id===id));
   const options=choices.map(c=>`<button class="option ${state.answered?(c.id===it.id?'correct':c.id===state.selected?'wrong':''):''}" data-action="choose" data-id="${esc(c.id)}" ${state.answered?'disabled':''}>${face(c,true)}</button>`).join('');
   const feedback=state.answered?`<div style="margin-top:12px">${button('Next →','next','')}</div>`:'';
-  body=`<div class="panel" style="text-align:center"><div class="small muted">Choose the correct translation</div>${face(it)}</div><div class="stack">${options}</div>${feedback}`;
+  body=`<div class="panel paper-question ${!isArabic()?'en-ar-question':''}" style="text-align:center"><div class="small muted">Choose the correct translation</div>${face(it)}</div><div class="stack paper-options ${!isArabic()?'en-ar-options':''}">${options}</div>${feedback}`;
  }else{
   const feedback=state.answered?`<div class="notice ${state.selected==='wrong'?'error':''}">${state.selected==='correct'?'Correct!':'Correct answer: '+answer}</div><div style="margin-top:12px">${button('Next →','next','')}</div>`:button('Check','check-type','');
-  body=`<div class="panel" style="text-align:center"><div class="small muted">Type the translation</div>${face(it)}</div><div class="field"><label for="typed">Your answer</label><input id="typed" ${isArabic()?'':'dir="rtl"'} value="${esc(state.typed)}" placeholder="Enter translation" autocomplete="off" autocapitalize="off" spellcheck="false" ${state.answered?'disabled':''}></div>${feedback}`;
+  body=`<div class="panel paper-question ${!isArabic()?'en-ar-question':''}" style="text-align:center"><div class="small muted">Type the translation</div>${face(it)}</div><div class="field"><label for="typed">Your answer</label><input id="typed" ${isArabic()?'':'dir="rtl"'} value="${esc(state.typed)}" placeholder="Enter translation" autocomplete="off" autocapitalize="off" spellcheck="false" ${state.answered?'disabled':''}></div>${feedback}`;
  }
  app.innerHTML=top+body+`<p class="small muted" style="text-align:center">Correct: ${state.sessionCorrect} · Mistakes: ${state.sessionWrong}</p>`;
 }
